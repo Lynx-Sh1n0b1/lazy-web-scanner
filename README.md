@@ -5,7 +5,7 @@ The script is designed to be easy to use, with all prompts and inputs explained 
 The logic of the script is:
 
 	1	Asking the user to input the target IP or URL to scan.
-	2   Bash echo statements to providing feedback to the user throughout the scanning process.
+	2	Bash echo statements to providing feedback to the user throughout the scanning process.
 	3	Pinging the target to check if it's alive. If it's not alive, use nmap to scan the target without ping (-Pn) and save the output to a file in the created folder.
 	4	If the target is alive, proceed to use nmap to scanning for open ports and services with version detection (-sV) and save the output to a file in the created folder.
 	5	If any open web ports are found (i.e. ports 80 or 443), starting a Nikto scan and save the output to a file in the created folder.
@@ -15,3 +15,4 @@ The logic of the script is:
 	9	Displaying a funny banner :) 
 	10	Printing a message indicating the location of the folder where all the scan results are saved.
 	11	Saying goodbye.
+	12	Don't forget chmod +x it!  
