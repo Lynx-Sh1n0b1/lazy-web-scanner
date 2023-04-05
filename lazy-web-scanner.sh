@@ -64,7 +64,7 @@ nmap -A -O -Pn -sV -T4 --max-rate=25000 --script "(not intrusive and not brute) 
 if grep -q -E "80|443|8000|8080|8443" nmap-full-target.txt
 then
     echo -e "${YELLOW}Starting Nikto full scan...${NC}"
-    nikto -h $target -output nikto-target.txt | >/dev/null 2>&1
+    nikto -h $target -output nikto-target.txt  &> /dev/null
 fi
 
 # Check if there are any open HTTP/HTTPS ports and start nmap script scan with web groups
